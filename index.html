@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charming Forum</title>
+  <!-- t & dUI cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- style_css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- font_manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <!-- font-awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- css -->
+  <style>
+    .Mulish {
+      font-family: "Mulish", sans-serif;
+    }
+  </style>
+
+</head>
+
+<body class="Mulish ">
+  <header class="container mx-auto px-2">
+    <!-- nav_section -->
+    <nav>
+      <div class="flex justify-between py-[50px] items-center">
+        <div class="navbar bg-base-100 shadow-sm">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+              </div>
+              <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                <li><a>Home</a></li>
+                <li><a>Products</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-4xl font-bold text-blue-400">SwifjCart</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>Products</a></li>
+              <li><a>About</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+    </nav>
+
+    <!-- banner_section -->
+    <div class="relative bg-[url('images/b_i.png')] bg-cover bg-center h-[450px] flex items-center justify-center">
+
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Content -->
+      <div class="relative text-left text-white px-6 max-w-2xl">
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+          Best Collection For You
+        </h2>
+
+        <p class="text-gray-200 mb-6 text-lg">
+          Discover the latest trends and premium products crafted specially for you.
+          Shop smart. Shop fast. Shop with <span class="font-semibold text-blue-400">SwiftCart</span>.
+        </p>
+
+        <button
+          class="bg-blue-600 hover:bg-blue-700 transition duration-300 px-6 py-3 rounded-lg text-lg font-semibold shadow-lg">
+          Shop Now
+        </button>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+  <main class="container mx-auto px-2">
+    <!-- Our Products_section_01 -->
+    <section class="">
+      <div class="mb-5">
+        <h1 class="pb-4 text-center text-[36px] font-extrabold">Our Products</h1>
+        <div class="text-center font-medium ">
+          <button onclick="handleAll()" class="btn btn-active">All</button>
+          <button onclick="handleElectronics()" class="btn btn-active btn-primary">Electronics</button>
+          <button onclick="handleJewwlery()" class="btn btn-active btn-secondary">Jewwlery</button>
+          <button onclick="handleMen()" class="btn btn-active btn-accent">Men's Clothing</button>
+          <button onclick="handleWomen()" class="btn btn-active btn-info">Women's Clothing</button>
+        </div>
+      </div>
+
+      <!-- Our New Products_img_section -->
+
+      <!-- <div id="loading_spinner" class="text-center hidden">
+        <span class="loading loading-bars loading-xs"></span>
+        <span class="loading loading-bars loading-sm"></span>
+        <span class="loading loading-bars loading-md"></span>
+        <span class="loading loading-bars loading-lg"></span>
+      </div> -->
+
+      <div id="cardContainer" class="shadow-2xl my-7 lg:grid grid-cols-3 ">
+
+      </div>
+
+
+    </section>
+
+    
+
+    <!-- Latest Posts_03 -->
+    <section class="my-10">
+      <div>
+        <h1 class="pb-4r text-[36px] font-extrabold">Trending Now</h1>
+      </div>
+
+      <div id="" class="p-3 lg:grid grid-cols-3 gap-3">
+
+        <!-- draft -->
+        <div class="border p-5 m-4 rounded-xl gap-y-2">
+        <img class="h-96 w-full object-contain" src="images/1.jpg" alt="">
+        <div class="flex justify-between">
+          <button>women's clothing</button>
+          <p><i class="fa-regular fa-star"></i>3.5</span></p>
+        </div>
+        <h3>Cotton Short</h3>
+        <h3><i class="fa-solid fa-dollar-sign">6</i></h3>
+        <div class="flex justify-between">
+          <button type="submit" class="btn"><i class="fa-regular fa-eye"></i>Details</button>
+          <button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i> add</button>
+        </div>
+      </div>
+        <div class="border p-5 m-4 rounded-xl gap-y-2">
+        <img class="h-96 w-full object-contain" src="images/t-shit.jpg" alt="">
+        <div class="flex justify-between">
+          <button>men's clothing</button>
+          <p><i class="fa-regular fa-star"></i>4.5</span></p>
+        </div>
+        <h3>Mens Casual Slim Fit</h3>
+        <h3><i class="fa-solid fa-dollar-sign">16</i></h3>
+        <div class="flex justify-between">
+          <button type="submit" class="btn"><i class="fa-regular fa-eye"></i>Details</button>
+          <button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i> add</button>
+        </div>
+      </div>
+        <div class="border p-5 m-4 rounded-xl gap-y-2">
+        <img class="h-96 w-full object-contain" src="images/bag.jpg" alt="">
+        <div class="flex justify-between">
+          <button>men's clothing</button>
+          <p><i class="fa-regular fa-star"></i>3.5</span></p>
+        </div>
+        <h3>Fjallraven - Foldsack No. 1</h3>
+        <h3><i class="fa-solid fa-dollar-sign">60</i></h3>
+        <div class="flex justify-between">
+          <button type="submit" class="btn"><i class="fa-regular fa-eye"></i>Details</button>
+          <button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i> add</button>
+        </div>
+      </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer_section<a class="btn btn-ghost text-4xl font-bold text-blue-400">SwifjCart</a> -->
+
+  <footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
+  <nav>
+    <h6 class=" text-4xl font-bold text-blue-800">SwifjCart</h6>
+    <a class="link link-hover">Branding</a>
+    <a class="link link-hover">Design</a>
+    <a class="link link-hover">Marketing</a>
+    <a class="link link-hover">Advertisement</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Company</h6>
+    <a class="link link-hover">About us</a>
+    <a class="link link-hover">Contact</a>
+    <a class="link link-hover">Jobs</a>
+    <a class="link link-hover">Press kit</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Legal</h6>
+    <a class="link link-hover">Terms of use</a>
+    <a class="link link-hover">Privacy policy</a>
+    <a class="link link-hover">Cookie policy</a>
+  </nav>
+  <form>
+    <h6 class="footer-title">Newsletter</h6>
+    <fieldset class="w-80">
+      <label>Enter your email address</label>
+      <div class="join">
+        <input
+          type="text"
+          placeholder="username@site.com"
+          class="input input-bordered join-item" />
+        <button class="btn btn-primary join-item">Subscribe</button>
+      </div>
+    </fieldset>
+  </form>
+</footer>
+
+  <!-- You can open the modal using ID.showModal() method -->
+  <!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
+
+  <dialog id="my_modal" class="modal">
+    <div class="modal-box w-11/12 max-w-5xl">
+      <div id="details_Container"></div>
+      <div class="modal-action">
+        <form method="dialog">
+          <!-- if there is a button, it will close the modal -->
+          <button class="btn">Close</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
